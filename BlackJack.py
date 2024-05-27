@@ -174,29 +174,29 @@ while escape == 0:
         bet = 0
         print('You busted')
         escape = int(input('Wish to continue? 0 yes, 1 no.'))
-        continue
-    if measure(DealerHand) > 21:
+        
+    else if measure(DealerHand) > 21:
         bet = bet * 2
         cash = cash + bet
         print('Dealer busts!')
         escape = int(input('Wish to continue? 0 yes, 1 no.'))
-        continue
-    if measure(PlayerHand) > measure(DealerHand):
+        
+    else if measure(PlayerHand) > measure(DealerHand):
         bet = bet * 2
         cash = cash + bet
         print('You win!')
         escape = int(input('Wish to continue? 0 yes, 1 no.'))
-        continue
-    if measure(PlayerHand) == measure(DealerHand):
+        
+    else if measure(PlayerHand) == measure(DealerHand):
         cash = bet + cash
         print('Push')
         escape = int(input('Wish to continue? 0 yes, 1 no.'))
-        continue
-    if measure(PlayerHand) < measure(DealerHand):
+        
+    else if measure(PlayerHand) < measure(DealerHand):
         bet = 0
         print('You lose!')
         escape = int(input('Wish to continue? 0 yes, 1 no.'))
-        continue
+        
 
 
 
